@@ -51,10 +51,6 @@ export class AppComponent {
 
   selectedData: any[] = [];
 
-
-
-
-// tslint:disable-next-line:typedef
   hideShow() {
     this.flagDiv = !this.flagDiv;
   }

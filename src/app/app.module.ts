@@ -5,12 +5,14 @@ import {AppComponent} from './app.component';
 import {FormsModule} from '@angular/forms';
 import {SelectRowComponent} from './select-row/select-row.component';
 import {ArrayFindPipe} from './pipes/arrayFind';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SelectRowComponent,
-    ArrayFindPipe
+    ArrayFindPipe,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
