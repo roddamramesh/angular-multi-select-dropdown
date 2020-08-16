@@ -1,0 +1,78 @@
+
+
+.dropdown {
+  position: absolute;
+  z-index: 9999;
+  background-color: white;
+  box-shadow: 0px 1px 1px black;
+}
+
+.ram-main-sec{
+  border-radius: 5px;
+  background: #ffffff;
+  border: 1px solid #ededed;
+  width: 700px;
+  box-shadow: 0px 5px 5px black;
+}
+.ram-badge {
+  background: #ffffff;
+  color: darkgray;
+  padding: 10px ;
+  font-size: 14px;
+  font-weight: 500;
+  float: left;
+  width: 100%;
+  .ram-header {
+    padding: 5px 10px 10px 10px;
+
+
+  }
+}
+
+.ram-input {
+  width: 100%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  box-shadow: 1px black;
+}
+
+.ram-table-body {
+  background-color: white;
+  padding: 5px 0px 0px 5px;
+  border-bottom: 1px solid rgb(193,194,195);
+  margin-top: 5px;
+  max-height: 300px;
+  height: auto;
+  overflow-y:scroll;
+  position:relative;
+  &::-webkit-scrollbar {
+    width: 10px;
+   }
+  &::-webkit-scrollbar-track {
+   background: #d9d9d9;
+  border-left: 5px solid #f6f6f6;
+  border-right: 5px solid #f6f6f6;
+  border-radius: 5px;
+   }
+  &::-webkit-scrollbar-thumb {
+     background: #222222;
+     border-left: 3px solid #f6f6f6;
+     border-right: 3px solid #f6f6f6;
+     border-radius: 5px;
+  }
+}
+
+.empty-values{
+  height:200px;
+  display: flex;
+  border-radius: 5px ;
+  background-color: #f3f3f3;
+
+
+}
+
+.ram-main-content{
+  padding:10px;
+  background-color: aliceblue;
+}

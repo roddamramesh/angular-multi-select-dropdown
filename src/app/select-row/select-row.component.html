@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row rm-badge" >
+    <div [ngClass]="columns['col0'].class" *ngIf="columns['col0']">
+      {{rowData[columns['col0'].field]}}
+    </div>
+    <div [ngClass]="columns['col1'].class" *ngIf="columns['col1']">
+      {{rowData[columns['col1'].field]}}
+    </div>
+    <div [ngClass]="columns['col2'].class" *ngIf="columns['col2']">
+      {{rowData[columns['col2'].field]}}
+    </div>
+    <div [ngClass]="columns['col3'].class" *ngIf="columns['col3']">
+      {{rowData[columns['col3'].field]}}
+    </div>
+    <div [ngClass]="columns['col4'].class" *ngIf="columns['col4']">
+      {{rowData[columns['col4'].field]==='M'?'Male':'Female' }}
+    </div>
+    <div [ngClass]="columns['col5'].class" *ngIf="columns['col5']">
+
+      <span *ngIf="columns['col5'].field === 'add'">
+          <img src="../../assets/add_circle-black-24dp.svg" (click)="add()"
+               *ngIf="!(selectedList | arrayFind:'id':rowData.id).id else disableAdd">
+
+             <ng-template #disableAdd>
+              <img src="../../assets/add_circle-white-24dp.svg">
+            </ng-template>
+
+      </span>
+      <span *ngIf="columns['col5'].field === 'remove'">
+         <img src="../../assets/remove_circle-black-24dp.svg" (click)="remove()"
+              *ngIf="(selectedList | arrayFind:'id':rowData.id).id else disableRemove">
+        <ng-template #disableRemove>
+          <img src="../../assets/remove_circle-white-24dp.svg">
+        </ng-template>
+      </span>
+
+
+    </div>
+
+
+  </div>
+</div>
