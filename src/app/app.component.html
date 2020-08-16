@@ -28,15 +28,15 @@
 
                   </app-select-row>
                 </ng-container>
-                <ng-template #displayEmptyTable>
-                  <div class="ram-table-body">
-                    <div class="empty-values">
-                      No Data
-                    </div>
-                  </div>
-                </ng-template>
 
               </div>
+              <ng-template #displayEmptyTable>
+                <div class="ram-table-body">
+                  <div class="empty-values">
+
+                  </div>
+                </div>
+              </ng-template>
 
             </div>
 
@@ -58,7 +58,7 @@
 
           </div>
         </div>
-        <div *ngIf="selectedData && selectedData.length>0">
+        <div *ngIf="selectedData && selectedData.length>0 else emptyTable">
           <ng-container *ngFor="let row of selectedData; index as i">
             <app-select-row [columns]="readOnlyColumns" [rowData]="row" (removeEmitter)="removeFromList(i)"
                             [selectedList]="selectedData">
@@ -67,6 +67,13 @@
           </ng-container>
 
         </div>
+        <ng-template #emptyTable>
+          <div class="ram-table-body">
+            <div class="empty-values">
+
+            </div>
+          </div>
+        </ng-template>
       </div>
 
     </div>
